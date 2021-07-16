@@ -20,6 +20,11 @@ try {
     console.log(`num Current price: ${numCurrentPrice}`);
     console.log(`num Previous price: ${numPreviousPrice}`);
 
+    if ((numCurrentPrice >= numLimitPrice && numPreviousPrice < numLimitPrice) || (numCurrentPrice <= numLimitPrice && numPreviousPrice > numLimitPrice)) {
+        core.setOutput("limit-event", true);
+    } else {
+        core.setOutput("limit-event", false);
+    }
 
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
@@ -27,7 +32,6 @@ try {
     // Get the JSON webhook payload for the event that triggered the workflow
     const payload = JSON.stringify(github.context.payload, undefined, 2)
     console.log(`The event payload: ${payload}`);
-  } catch (error) {
+} catch (error) {
     core.setFailed(error.message);
-  }
-  
+}
