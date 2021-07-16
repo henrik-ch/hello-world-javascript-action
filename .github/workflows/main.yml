@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: henrik-ch/hello-world-javascript-action@v1.1
+        uses: henrik-ch/hello-world-javascript-action@v1.2
         with:
           who-to-greet: 'Henrik'
           limit-price: '10'
