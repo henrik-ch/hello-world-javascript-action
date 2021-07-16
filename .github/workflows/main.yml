@@ -15,5 +15,6 @@ jobs:
           previous-price: '8'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
-        run: echo "The limit event was ${{ steps.hello.outputs.limit-event }}"
+        run: |-
+          echo "The time was ${{ steps.hello.outputs.time }}"
+          echo "The limit event was ${{ steps.hello.outputs.limit-event }}"
