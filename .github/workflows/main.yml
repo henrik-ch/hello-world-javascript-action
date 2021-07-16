@@ -12,7 +12,7 @@ jobs:
           who-to-greet: 'Henrik'
           limit-price: '10.02'
           current-price: '12.03'
-          previous-price: '8.04'
+          previous-price: '11.04'
       # Use the output from the `hello` step
       - name: Get the output time
         run: |-
