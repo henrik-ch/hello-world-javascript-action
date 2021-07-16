@@ -7,12 +7,12 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: henrik-ch/hello-world-javascript-action@v1.2
+        uses: henrik-ch/hello-world-javascript-action@v1.3
         with:
           who-to-greet: 'Henrik'
-          limit-price: '10'
-          current-price: '12'
-          previous-price: '8'
+          limit-price: '10.02'
+          current-price: '12.03'
+          previous-price: '8.04'
       # Use the output from the `hello` step
       - name: Get the output time
         run: |-
