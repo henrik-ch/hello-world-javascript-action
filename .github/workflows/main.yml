@@ -10,7 +10,7 @@ jobs:
         uses: henrik-ch/hello-world-javascript-action@v1.5
         with:
           who-to-greet: 'Henrik'
-          limit-price: '10.02'
+          limit-price: '11.52'
           current-price: '12.03'
           previous-price: '11.04'
       # Use the output from the `hello` step
