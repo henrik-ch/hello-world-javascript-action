@@ -5,9 +5,23 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  limit-price: # id of input
+    description: 'Limit price to check'
+    required: true
+    default: '10'
+  current-price: #id of input
+    description: 'Current price to check against'
+    required: true
+    default: '12'
+  previous-price: #id of input
+   description: 'Previous price to check against'
+   required: true
+   default: '8'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
+  limit-event:
+    description: 'Did a limit event occur or not'
 runs:
   using: 'node12'
   main: 'index.js'
