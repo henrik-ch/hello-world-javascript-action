@@ -9,7 +9,7 @@ jobs:
         id: limit
         uses: henrik-ch/limit-event-javascript-action@v1.9
         with:
-          limit-price: '11.02'
+          limit-price: '11.50'
           current-price: '12.03'
           previous-price: '11.04'
       # Use the output from the `limit` step
