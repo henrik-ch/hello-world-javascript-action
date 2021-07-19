@@ -17,3 +17,7 @@ jobs:
         run: |-
           echo "The time was ${{ steps.limit.outputs.time }}"
           echo "The limit event was ${{ steps.limit.outputs.limit-event }}"
+      - name: test if limit event is true
+        if: steps.limit.outputs.limit-event == 'true'
+        run: |-
+          echo "The limit event conditional trigger was ${{ steps.limit.outputs.limit-event }}"
