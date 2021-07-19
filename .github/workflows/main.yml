@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Limit event action step
         id: limit
-        uses: henrik-ch/limit-event-javascript-action@v1.8
+        uses: henrik-ch/limit-event-javascript-action@v1.9
         with:
           limit-price: '11.02'
           current-price: '12.03'
