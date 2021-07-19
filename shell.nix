@@ -9,7 +9,6 @@ mkShell {
     ripgrep
     nix-info
     curl
-    git
     # act
   ];
 }
