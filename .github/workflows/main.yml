@@ -5,16 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to check for limit event
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: henrik-ch/hello-world-javascript-action@v1.5
+      - name: Limit event action step
+        id: limit
+        uses: henrik-ch/limit-event-javascript-action@v1.6
         with:
-          who-to-greet: 'Henrik'
           limit-price: '11.01'
           current-price: '12.03'
           previous-price: '11.04'
-      # Use the output from the `hello` step
+      # Use the output from the `limit` step
       - name: Get the output time
         run: |-
-          echo "The time was ${{ steps.hello.outputs.time }}"
-          echo "The limit event was ${{ steps.hello.outputs.limit-event }}"
+          echo "The time was ${{ steps.limit.outputs.time }}"
+          echo "The limit event was ${{ steps.limit.outputs.limit-event }}"
