@@ -1,5 +1,5 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Limit price check'
+description: 'Check if limit event has occurred using current and previous price'
 inputs:
   limit-price: # id of input
     description: 'Limit price to check'
@@ -15,7 +15,7 @@ inputs:
    default: '8'
 outputs:
   time: # id of output
-    description: 'The time we greeted you'
+    description: 'The time we did the limit check'
   limit-event:
     description: 'Did a limit event occur or not'
 runs:

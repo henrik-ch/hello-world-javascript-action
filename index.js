@@ -2,8 +2,6 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
-    // `who-to-greet` input defined in action metadata file
-    const nameToGreet = core.getInput('who-to-greet');
     const limitPrice = core.getInput('limit-price');
     const currentPrice = core.getInput('current-price');
     const previousPrice = core.getInput('previous-price');
@@ -11,7 +9,6 @@ try {
     const numCurrentPrice = parseFloat(currentPrice);
     const numPreviousPrice = parseFloat(previousPrice);
 
-    console.log(`Hello ${nameToGreet}!`);
     console.log(`Limit price: ${limitPrice}`);
     console.log(`Current price: ${currentPrice}`);
     console.log(`Previous price: ${previousPrice}`);

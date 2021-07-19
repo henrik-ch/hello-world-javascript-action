@@ -1,6 +1,7 @@
-# hello-world-javascript-action
+# limit-event-javascript-action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action checks a price limit, current price and previous price, to determine if a limit event 
+has occurred.
 
 ## Inputs
 
@@ -29,6 +30,8 @@ Did a limit event occur or not.
 
 ## Example usage
 
-uses: actions/limit-event-javascript-action@v1.1
+uses: henrik-ch/limit-event-javascript-action@v1.8
 with:
-  who-to-greet: 'Mona the Octocat'
+  limit-price: ${{env.PRICE_LIMIT}}
+  current-price: ${{env.CUR_PRICE}}
+  previous-price: ${{env.PREV_PRICE}}
