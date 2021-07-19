@@ -9,11 +9,11 @@ jobs:
         id: limit
         uses: henrik-ch/limit-event-javascript-action@v1.8
         with:
-          limit-price: '11.01'
+          limit-price: '11.50'
           current-price: '12.03'
           previous-price: '11.04'
       # Use the output from the `limit` step
-      - name: Get the output time
+      - name: Get the time and limit event
         run: |-
           echo "The time was ${{ steps.limit.outputs.time }}"
           echo "The limit event was ${{ steps.limit.outputs.limit-event }}"
